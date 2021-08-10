@@ -1,0 +1,26 @@
+header.default-header
+  border-bottom: 1px solid #ddd
+  .header-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 60px
+    section
+      height: inherit
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 0 1rem
+      &.left-wing
+        margin-right: 0.1rem
+        flex-grow: 1
+        justify-content: flex-start
+        .logo
+          a
+            color: #917cbc !important
+            font-size: 30px
+
+      &.right-wing
+        justify-content: flex-end
+        margin-left: 0.1rem
+        flex-grow: 4

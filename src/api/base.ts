@@ -1,4 +1,8 @@
+// pkgs:
 import axios from 'axios';
+
+// utils:
+import { objGetter } from '../common/utilities/localstorage-dealer/localstorage-getters.util';
 
 // the connection base:
 let baseUrl: string;
@@ -18,9 +22,10 @@ const APIHandler = axios.create({ baseURL: baseUrl });
 
 // make a verification with every future sent req
 APIHandler.interceptors.request.use((req) => {
-  const authed = JSON.parse(localStorage.getItem('currentAuthedUser') || '{}');
-  if (authed) {
-    req.headers.Authorization = `Bearer ${authed.token}`;
+  const auth = objGetter(`@currentAuthedUser`);
+
+  if (auth) {
+    req.headers.Authorization = `Bearer ${auth.token}`;
   }
 
   return req;

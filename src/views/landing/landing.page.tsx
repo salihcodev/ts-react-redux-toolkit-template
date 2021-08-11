@@ -1,8 +1,8 @@
 // pkgs:
 
 // comps:
-import InitialSliceComponent from '../../components/base/initial/initial.comp';
 import PagesHero from '../../components/distributed/hero/hero.comp';
+import InitialSliceComponent from '../../components/base/initial/initial.comp';
 
 // utils:
 import './style.sass';

@@ -1,29 +1,39 @@
+@import './utils/_mixins.util'
+@import './utils/_colors.util'
+@import './utils/_fonts.util'
+
 *
   box-sizing: border-box
 
+// !important =>>> just to broke the styles coming from bootstrap
 body
   margin: 0
-  font-family: operator mono lig, monaco, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important
+  font-family: $main_font, monaco, monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell','Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important
   -webkit-font-smooInitial: antialiased
   -moz-osx-font-smooInitial: grayscale
   text-align: center
-  color: #333
+  color: $app_gray
+  font-style: italic
 
 // GLOBALS:
 code
   font-family: monaco, monospace, source-code-pro, Menlo, Consolas, 'Courier New'
   color: gray !important
+  color: $main_clr !important
+
 a
   text-decoration: none !important
   &:hover
     text-decoration: none
+
 small
-  // color: $main_clr
-h2,h3, h4, h5, h6
-  font-weight: bold
-  // import color
+  color: $main_clr
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 200 !important
+
 ul, ol
-  // import mixin
+  @include unstyle_lists
+
 p
-  // import color
   margin: 0

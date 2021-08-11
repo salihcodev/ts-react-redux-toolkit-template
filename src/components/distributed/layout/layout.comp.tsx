@@ -3,24 +3,19 @@ import { Fragment } from 'react';
 
 // utils:
 import './style.sass';
+import { LayoutInterface } from '../../../common/interfaces/comps/layout.interface';
 
 // comps:
 import Footer from '../footer/footer.comp';
 import Header from '../header/header.comp';
 
-// interfaces:
-interface CompProps {
-  expanded: boolean;
-  minimal: boolean;
-  children?: JSX.Element;
-}
-
-const Layout: React.VFC<CompProps> = ({ children, expanded, minimal }) => {
+// component>>>
+const Layout: React.VFC<LayoutInterface> = ({ children, expanded }) => {
   return (
     <Fragment>
-      <Header expanded={expanded} minimal={minimal} />
+      <Header expanded={expanded} />
       {children}
-      <Footer expanded={expanded} minimal={minimal} />
+      <Footer expanded={expanded} />
     </Fragment>
   );
 };

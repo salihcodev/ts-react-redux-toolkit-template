@@ -1,21 +1,17 @@
 // pkgs:
 
-// components:
-
 // utils:
 import './style.sass';
+import { BannerPropsTypes } from '../../../common/interfaces/comps/banner.interface';
 
-// interfaces:
-interface CompProps {
-  heading: string;
-  description: string;
-}
+// comps:
 
-const Banner: React.VFC<CompProps> = ({ heading, description }) => {
+// component>>>
+const Banner: React.VFC<BannerPropsTypes> = ({ heading, description }) => {
   return (
     <section className="banner">
       <h2 className="banner-heading">{heading}</h2>
-      <p className="banner-desc">{description}</p>
+      {description ? <p className="banner-desc">{description}</p> : null}
     </section>
   );
 };

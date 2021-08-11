@@ -1,12 +1,12 @@
+// pkgs:
+
 // utils:
 import './style.sass';
+import { AddBannerPropsTypes } from '../../../common/interfaces/comps/add-banner.interface';
 
 // comps:
 
-// interfaces:
-interface CompProps {}
-
-const AddBanner: React.VFC<CompProps> = () => {
+const AddBanner: React.VFC<AddBannerPropsTypes> = () => {
   return (
     // xcvdssdg35456df4 to not be detectable bt the browser extensions
     <section className="xcvdssdg35456df4">

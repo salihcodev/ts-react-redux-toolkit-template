@@ -1,24 +1,27 @@
+@import '../../../common/styles/utils/_mixins.util'
+@import '../../../common/styles/utils/_colors.util'
+
 header.default-header
-  border-bottom: 1px solid #ddd
+  border-bottom: 1px solid $alt_dark-3
   .header-wrapper
-    display: flex
-    align-items: center
-    justify-content: space-between
+    @include flex_positioning(center, center)
     height: 60px
     section
       height: inherit
-      display: flex
-      align-items: center
-      justify-content: center
+      @include flex_positioning(center, center)
       padding: 0 1rem
       &.left-wing
         margin-right: 0.1rem
         flex-grow: 1
         justify-content: flex-start
         .logo
+          height: 100%
+          width: 13rem
           a
-            color: #917cbc !important
-            font-size: 30px
+            display: block
+            height: inherit
+            width: inherit
+            background: url('../../../../public/assets/images/logo.svg') center/cover
 
       &.right-wing
         justify-content: flex-end

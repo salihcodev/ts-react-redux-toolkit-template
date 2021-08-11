@@ -7,9 +7,10 @@ import PagesHero from '../../components/distributed/hero/hero.comp';
 // utils:
 import './style.sass';
 
+// component>>>
 const LandingPage = () => {
-  const heroHeading = `Start to track your activities, And be more productive`;
-  const heroDescription = `join us and track your daily tasks and filter unnecessary and redundant activities `;
+  const heroHeading = `Start to build awesome apps, And be more productive`;
+  const heroDescription = `There is no need for writing boring boilerplate any more :)`;
 
   return (
     <main className="page landing-page">

@@ -8,19 +8,15 @@ import FormInput from '../../components/distributed/form-input/form-input.comp';
 
 // utils:
 import './style.sass';
+import { SignupFormTypes } from '../../common/types/signup-form.types';
 
+// component>>>
 const SignupPage = () => {
   // comps info:
 
-  // builtin hooks
+  // preConfigured hooks:
   const history = useHistory();
   const dispatch = useDispatch();
-
-  // Signup form schema
-  type SignupFormTypes = {
-    firstName: null | string;
-    lastName: null | string;
-  };
 
   const formSchema = {
     firstName: null,
@@ -29,11 +25,9 @@ const SignupPage = () => {
     password: null,
   };
 
-  // Signup form data
-  // statically:
+  // collect inputs data:
   const [formData, setFormData] = useState<SignupFormTypes>(formSchema);
 
-  // with Signup user form:
   const handleSignupSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
   };
@@ -46,6 +40,7 @@ const SignupPage = () => {
         </div>
         <div className="Signup-form">
           <form onSubmit={handleSignupSubmit}>
+            {/* START ADD YOUR INPUTS AS BE MIGHT NEEDED */}
             <FormInput
               type="text"
               label="Email"
@@ -56,6 +51,7 @@ const SignupPage = () => {
             />
 
             {/* submitter btn */}
+            {/* you can use btn component here as you like */}
             <button type="submit">Signup</button>
 
             <p className="not-registered">

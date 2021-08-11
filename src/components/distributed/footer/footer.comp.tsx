@@ -6,16 +6,12 @@ import { Container } from 'react-bootstrap';
 
 // utils:
 import './style.sass';
+import { FooterInterface } from '../../../common/interfaces/comps/footer.interface';
 
 // comps:
 
-// interfaces:
-interface CompProps {
-  expanded: boolean;
-  minimal: boolean;
-}
-
-const Footer: VFC<CompProps> = ({ expanded, minimal }) => {
+// component>>>
+const Footer: VFC<FooterInterface> = ({ expanded }) => {
   return (
     <footer className="default-footer">
       <Container fluid={expanded}>

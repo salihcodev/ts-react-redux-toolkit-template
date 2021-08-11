@@ -3,25 +3,30 @@ import APIHandler from '../base';
 
 // >>>> GET, fetching all data:
 export const fetchAllInitial = (currPage: number) =>
-  APIHandler.get(`/Initial/all?page=${currPage}`);
+  APIHandler.get(`/initial/all?page=${currPage}`);
 
-// >>>> POST, create new Initial::
-export const createInitial = (InitialToCreate: object) =>
-  APIHandler.post('/Initial', InitialToCreate);
+// >>>> POST, create new initial::
+export const createInitial = (initialToCreate: object) =>
+  APIHandler.post('/initial', initialToCreate);
 
-// >>>> DELETE, delete a specific Initial::
-export const deleteInitial = (id: string) => APIHandler.delete(`/Initial/${id}`);
+// >>>> DELETE, delete a specific initial::
+export const deleteInitial = (id: string) => APIHandler.delete(`/initial/${id}`);
 
-// >>>> UPDATE, update a specific Initial::
+// >>>> UPDATE, update a specific initial::
 export const updateInitial = (id: string, InitialToUpdate: object) =>
-  APIHandler.patch(`/Initial/${id}`, InitialToUpdate);
+  APIHandler.patch(`/initial/${id}`, InitialToUpdate);
 
 // SEARCHING with query params::
-//  >>>> in all Initials:
+//  >>>> in all initials:
 export const handelSearchInAll = (where: string, searchQuery: any) =>
+  /* 
+    - where: the route you wanna search in.
+    - searchQuery: value to search with, custom it as you need.
+  */
+
   APIHandler.get(
     `${where}?searchQuery=${searchQuery.query || 'none'}&tags=${searchQuery.tags?.join(',')}`
   );
 
-// >>>> GET, get Initial with its `id`::
-export const getInitial = (id: string) => APIHandler.get(`/Initial/s/${id}`);
+// >>>> GET, get initial with its `id`::
+export const getInitial = (id: string) => APIHandler.get(`/initial/s/${id}`);

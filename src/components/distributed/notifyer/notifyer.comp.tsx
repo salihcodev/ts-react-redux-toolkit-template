@@ -3,17 +3,12 @@ import { useState, VFC } from 'react';
 
 // utils:
 import './style.sass';
+import { NotifyerInterface } from '../../../common/interfaces/comps/notifyer.interface';
 
 // comps:
 
-// interfaces:
-interface CompProps {
-  type: string;
-  title: string;
-  msg?: string;
-}
-
-const Notifyer: VFC<CompProps> = ({ type, title, msg }) => {
+// component>>>
+const Notifyer: VFC<NotifyerInterface> = ({ type, title, msg }) => {
   // comp's locals:
   const stylesSchema = { colors: undefined, borders: undefined };
   const [styles, setStyles] =

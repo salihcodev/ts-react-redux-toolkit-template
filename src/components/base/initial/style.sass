@@ -1,41 +1,37 @@
-@import '../../../common/styles/utils/_colors.util.sass'
+@import '../../../common/styles/utils/_colors.util'
+@import '../../../common/styles/utils/_mixins.util'
 
 .initial-component
   .result-box
-    display: flex
-    align-items: center
-    justify-content: center
+    @include flex_positioning(center, center)
     height: 8rem
   h2.counter-number
     text-align: center
+    color: $main_clr
+    font-weight: 900
+    font-size: 50px
   span.loading
+    background: url('../../../../public/assets/images/loading.gif') center/cover
     width: 4rem
     height: 4rem
-    display: flex
-    align-items: center
-    justify-content: center
     margin-bottom: 1rem
-    background: url('../../../../public/assets/images/loading.gif') center/cover
+    @include flex_positioning(center, center)
   section.controllers
     padding: 0.1rem
-    display: flex
-    align-items: center
-    justify-content: center
+    @include flex_positioning(center, center)
     flex-wrap: wrap
-    button
-      padding: 0.2rem 0.7rem
-      background: #ddd
-      border: 2px solid #ccc
-      border-radius: 6px
-      margin: 0.1rem
-      display: flex
-      align-items: center
-      justify-content: center
-      text-transform: uppercase
-      height: 2.5rem
-      &.basic-controllers
-        justify-content: space-around
-        button
-          font-size: 18px
+  button
+    padding: 0.2rem 0.7rem
+    background: $alt_dark-3
+    border: 2px solid $alt_dark-4
+    border-radius: 6px
+    margin: 0.1rem
+    @include flex_positioning(center, center)
+    text-transform: uppercase
+    height: 2.5rem
+    &.basic-controllers
+      justify-content: space-around
+      button
+        font-size: 18px
       &.additional-controllers
         justify-content: space-around

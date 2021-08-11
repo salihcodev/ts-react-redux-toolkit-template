@@ -1,4 +1,3 @@
-// STARTING POINT...
 // pkgs:
 import { Container } from 'react-bootstrap';
 
@@ -7,6 +6,7 @@ import { Container } from 'react-bootstrap';
 // utils:
 import './style.sass';
 
+// component>>>
 const TermsPage = () => {
   return (
     <main className="page terms-page">

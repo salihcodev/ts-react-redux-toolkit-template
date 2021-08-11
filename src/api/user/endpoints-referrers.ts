@@ -1,11 +1,15 @@
 // utils:
-import APIHandler from "../base";
+import APIHandler from '../base';
+
+/* 
+  ***PLEASE***
+   make sure to build user interface in interfaces directory,
+   and get ride of dummy object below
+*/
 
 // setup <user> network requests
 // >>>> SIGNIN, manage existed user to login
-export const login = (userData: object) =>
-  APIHandler.post("/user/signin", userData);
+export const signin = (userData: object) => APIHandler.post('/user/signin', userData);
 
 // >>>> SIGNUP, create new user
-export const signup = (userData: object) =>
-  APIHandler.post("/user/signup", userData);
+export const signup = (userData: object) => APIHandler.post('/user/signup', userData);

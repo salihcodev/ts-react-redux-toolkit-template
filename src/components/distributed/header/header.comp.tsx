@@ -5,14 +5,12 @@ import { Link, NavLink, useHistory, useLocation } from 'react-router-dom';
 
 // utils:
 import './style.sass';
+import { HeaderInterface } from '../../../common/interfaces/comps/header.interface';
 
 // comps:
-interface CompProps {
-  expanded: boolean;
-  minimal: boolean;
-}
 
-const Header: VFC<CompProps> = ({ expanded, minimal }) => {
+// component>>>
+const Header: VFC<HeaderInterface> = ({ expanded }) => {
   // preConfigured hooks:
   const history = useHistory();
   const location = useLocation();
@@ -27,7 +25,7 @@ const Header: VFC<CompProps> = ({ expanded, minimal }) => {
         <div className="header-wrapper">
           <section className="left-wing">
             <div className="logo">
-              <Link to="/">LOGO</Link>
+              <Link to="/"></Link>
             </div>
           </section>
           <section className="right-wing">

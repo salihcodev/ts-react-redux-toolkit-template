@@ -8,30 +8,24 @@ import FormInput from '../../components/distributed/form-input/form-input.comp';
 
 // utils:
 import './style.sass';
+import { SignInFormTypes } from '../../common/types/signin-form.types';
 
+// component>>>
 const LoginPage = () => {
   // comps info:
 
-  // builtin hooks
+  // preConfigured hooks:
   const history = useHistory();
   const dispatch = useDispatch();
-
-  // login form schema
-  type loginFormTypes = {
-    email: null | string;
-    password: null | string;
-  };
 
   const formSchema = {
     email: null,
     password: null,
   };
 
-  // login form data
-  // statically:
-  const [formData, setFormData] = useState<loginFormTypes>(formSchema);
+  // collect inputs data:
+  const [formData, setFormData] = useState<SignInFormTypes>(formSchema);
 
-  // with login user form:
   const handleLoginSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
   };
@@ -44,6 +38,7 @@ const LoginPage = () => {
         </div>
         <div className="login-form">
           <form onSubmit={handleLoginSubmit}>
+            {/* START ADD YOUR INPUTS AS BE MIGHT NEEDED */}
             <FormInput
               type="text"
               label="Email"
@@ -62,6 +57,7 @@ const LoginPage = () => {
             />
 
             {/* submitter btn */}
+            {/* you can use btn component here as you like */}
             <button type="submit">Login</button>
 
             <p className="not-registered">

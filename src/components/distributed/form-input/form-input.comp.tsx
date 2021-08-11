@@ -1,20 +1,13 @@
 // pkgs:
 
 // utils:
-import "./style.sass";
+import { FormInputInterface } from '../../../common/interfaces/comps/form-input.interface';
+import './style.sass';
 
-// components:
+// comps:
 
-// interfaces:
-interface CompProps {
-  type: string;
-  label: string;
-  inputName: string;
-  collectInputData: (name: string, value: string) => void;
-  otherProps?: any;
-}
-
-const FormInput: React.VFC<CompProps> = ({
+// component>>>
+const FormInput: React.VFC<FormInputInterface> = ({
   type,
   inputName,
   label,

@@ -1,12 +1,12 @@
-// STARTING POINT...
 // pkgs:
-import { Container } from "react-bootstrap";
+import { Container } from 'react-bootstrap';
 
-// components:
+// comps:
 
 // utils:
-import "./style.sass";
+import './style.sass';
 
+// component>>>
 const ContactPage = () => {
   return (
     <main className="page contact-page">

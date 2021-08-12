@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Start to build awesome apps, And be more productive⚡️</h2>
+<h2 align="center">Start to build awesome apps, And be more productive⚡️</h2>
 
 <p align="center">There is no need for writing boring boilerplate any more :)</p>
 
@@ -50,8 +50,6 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 ---
-
-<br>
 
 ## File Structure
 
@@ -190,8 +188,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 ```
 
 ---
-
-<br>
 
 ## Contribution
 

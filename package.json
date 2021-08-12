@@ -35,6 +35,9 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
+  "devDependencies": {
+    "netlify-cli": "^2.8.3"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },

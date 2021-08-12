@@ -11,11 +11,10 @@
 <br>
 
 <p align="center">
+ <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/21aec84e-85b3-445d-8f2d-fe08e4380746/deploy-status" />
   <img alt="MIT License" src="https://img.shields.io/github/license/salihcodev/ts-react-redux-toolkit-template"/>
   <img alt="Github Stars" src="https://badgen.net/github/stars/salihcodev/ts-react-redux-toolkit-template" />
-  <img alt="CircleCI" src="https://img.shields.io/circleci/build/github/salihcodev/ts-react-redux-toolkit-template/main" />
-  
-  
+ <img alt="CircleCI" src="https://img.shields.io/circleci/build/github/salihcodev/ts-react-redux-toolkit-template/main" />
 </p>
 
 <br />
@@ -56,11 +55,14 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 ## File Structure
 
-```bash
+```javascript
 .../ts-react-redux-toolkit-template
 │
 ├── config-overrides.js
-├── package.json
+├── docker-compose.yml
+├── Dockerfile.dev
+├── Dockerfile
+│
 ├── public
 │   ├── assets
 │   │   ├── fonts
@@ -79,7 +81,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 │   ├── logo512.png
 │   ├── manifest.json
 │   └── robots.txt
-├── README.md
+│
 ├── src
 │   ├── api
 │   │   ├── base.ts
@@ -90,7 +92,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 │   ├── App.test.tsx
 │   ├── App.tsx
 │   ├── common
-│   │   ├── constants // static content
+│   │   ├── constants
 │   │   ├── interfaces
 │   │   │   ├── auth
 │   │   │   │   └── auth.interface.ts
@@ -164,8 +166,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 │   │   │       └── logic
 │   │   │           └── async-call.sliceLogic.ts
 │   │   └── store.ts
-│   ├── serviceWorker.ts
-│   ├── setupTests.ts
+│   │  
 │   └── views
 │       ├── contact
 │       │   ├── contact.page.tsx
@@ -185,8 +186,15 @@ Instead, it will copy all the configuration files and the transitive dependencie
 │       └── terms
 │           ├── style.sass
 │           └── terms.page.tsx
+│
+├── serviceWorker.ts
 ├── tsconfig.json
+├── setupTests.ts
+├── package.json
 └── yarn.lock
+├── README.md
+├── LICENSE
+
 
 ```
 

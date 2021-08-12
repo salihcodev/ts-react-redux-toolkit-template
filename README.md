@@ -13,7 +13,9 @@
 <p align="center">
   <img alt="MIT License" src="https://img.shields.io/github/license/salihcodev/ts-react-redux-toolkit-template"/>
   <img alt="Github Stars" src="https://badgen.net/github/stars/salihcodev/ts-react-redux-toolkit-template" />
-  ![CircleCI](https://img.shields.io/circleci/build/github/salihcodev/ts-react-redux-toolkit-template/main)
+  <img alt="CircleCI" src="https://img.shields.io/circleci/build/github/salihcodev/ts-react-redux-toolkit-template/main" />
+  
+  
 </p>
 
 <br />

@@ -13,7 +13,7 @@ const PagesHero: React.VFC<PagesHeroInterface> = ({ children, heading, descripti
     <section className="pages-hero">
       <Container>
         <div className="hero-wrapper">
-          <h2 className="hero-heading">{heading}</h2>
+          <h1 className="hero-heading">{heading}</h1>
           <p className="hero-description">{description}</p>
           {children ? <div className="buttons">{children}</div> : null}
         </div>
